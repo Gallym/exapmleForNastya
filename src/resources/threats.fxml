@@ -3,7 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nastya.Controllers.ThreatsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nastya.Controllers.ThreatsController">
+   <top>
+      <Label text="Угрозы" BorderPane.alignment="CENTER" />
+   </top>
    <center>
       <ScrollPane>
          <VBox fx:id="threatsView">
@@ -14,10 +17,6 @@
       </ScrollPane>
    </center>
    <bottom>
-
       <Button fx:id="nextBtn" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#onClickEvent" text="Выбрать" BorderPane.alignment="CENTER" />
    </bottom>
-   <top>
-      <Label text="Угрозы" BorderPane.alignment="CENTER" />
-   </top>
 </BorderPane>

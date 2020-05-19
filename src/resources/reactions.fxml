@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<!--<VBox fx:id="layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nastya.Controllers.СounteractionController">-->
-<!--   <children>-->
-<!--      <Label fx:id="label" minWidth="100.0" text="Label" />-->
-<!--      <VBox fx:id="options" prefHeight="200.0" prefWidth="100.0" />-->
-<!--      <Button mnemonicParsing="false" onAction="#goBack" text="Go Back" />-->
-<!--   </children>-->
-<!--</VBox>-->
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nastya.Controllers.СounteractionController">
+   <top>
+      <Label fx:id="label" minWidth="600.0" text="Label" wrapText="true" />
+   </top>
+   <center>
+      <VBox fx:id="layout" minWidth="600.0">
+         <ScrollPane>
+            <VBox fx:id="options" minWidth="600.0">
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nastya.Controllers.СounteractionController">
-<center>
-   <ScrollPane>
-      <VBox fx:id="layout" >
-         <children>
-            <Label fx:id="label" minWidth="100.0" text="Label" />
-            <VBox fx:id="options" prefHeight="200.0" prefWidth="100.0" />
-         </children>
+            </VBox>
+         </ScrollPane>
+         <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#checkout" text="Рекомандации" BorderPane.alignment="CENTER" />
+         <ScrollPane>
+            <Label fx:id="recommendation"/>
+         </ScrollPane>
       </VBox>
-   </ScrollPane>
-</center>
-<bottom>
-   <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#goBack" text="Назад" BorderPane.alignment="CENTER" />
-</bottom>
+   </center>
+   <bottom>
+      <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#goBack" text="Назад" BorderPane.alignment="CENTER" />
+   </bottom>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </BorderPane>
